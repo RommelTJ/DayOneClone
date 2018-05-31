@@ -107,16 +107,16 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-HP-foA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-HP-foA">
+                                    <rect key="frame" x="0.0" y="70" width="375" height="60"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhI-Dc-Hbl">
-                                            <rect key="frame" x="0.0" y="0.0" width="329" height="200"/>
-                                            <state key="normal" title="Button"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhI-Dc-Hbl">
+                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
+                                            <state key="normal" image="whiteCamera"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAb-et-BpP">
-                                            <rect key="frame" x="329" y="0.0" width="46" height="200"/>
-                                            <state key="normal" title="Button"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAb-et-BpP">
+                                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
+                                            <state key="normal" image="add"/>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -124,9 +124,9 @@
                             <color key="backgroundColor" red="0.29803921568627451" green="0.75686274509803919" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="yq7-HP-foA" secondAttribute="trailing" id="Mlp-B6-JPo"/>
-                                <constraint firstAttribute="bottom" secondItem="yq7-HP-foA" secondAttribute="bottom" id="X0P-Yy-0MR"/>
+                                <constraint firstAttribute="bottom" secondItem="yq7-HP-foA" secondAttribute="bottom" constant="70" id="X0P-Yy-0MR"/>
                                 <constraint firstItem="yq7-HP-foA" firstAttribute="leading" secondItem="7Ns-h1-gYp" secondAttribute="leading" id="kzO-4g-ap8"/>
-                                <constraint firstItem="yq7-HP-foA" firstAttribute="top" secondItem="7Ns-h1-gYp" secondAttribute="top" id="nJX-7G-45l"/>
+                                <constraint firstItem="yq7-HP-foA" firstAttribute="top" secondItem="7Ns-h1-gYp" secondAttribute="top" constant="70" id="nJX-7G-45l"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -145,6 +145,10 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item 1" id="r8U-sI-od0"/>
+                    <connections>
+                        <outlet property="whiteCameraButton" destination="RhI-Dc-Hbl" id="Rtg-hO-XeR"/>
+                        <outlet property="whitePlusButton" destination="iAb-et-BpP" id="Pj2-IH-d6Q"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmz-D5-aED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,4 +183,8 @@
             <point key="canvasLocation" x="-732" y="155"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="256" height="256"/>
+        <image name="whiteCamera" width="256" height="256"/>
+    </resources>
 </document>
