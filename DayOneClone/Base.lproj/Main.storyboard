@@ -103,9 +103,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="7Ns-h1-gYp">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-HP-foA">
+                                    <rect key="frame" x="0.0" y="70" width="375" height="60"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhI-Dc-Hbl">
+                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
+                                            <state key="normal" image="whiteCamera"/>
+                                            <connections>
+                                                <action selector="cameraTapped:" destination="0kp-Il-fqh" eventType="touchUpInside" id="dFq-zK-GNj"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAb-et-BpP">
+                                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
+                                            <state key="normal" image="add"/>
+                                            <connections>
+                                                <action selector="plusTapped:" destination="0kp-Il-fqh" eventType="touchUpInside" id="lu3-Cb-xC7"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.29803921568627451" green="0.75686274509803919" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="yq7-HP-foA" secondAttribute="trailing" id="Mlp-B6-JPo"/>
+                                <constraint firstAttribute="bottom" secondItem="yq7-HP-foA" secondAttribute="bottom" constant="70" id="X0P-Yy-0MR"/>
+                                <constraint firstItem="yq7-HP-foA" firstAttribute="leading" secondItem="7Ns-h1-gYp" secondAttribute="leading" id="kzO-4g-ap8"/>
+                                <constraint firstItem="yq7-HP-foA" firstAttribute="top" secondItem="7Ns-h1-gYp" secondAttribute="top" constant="70" id="nJX-7G-45l"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="E0A-fz-iY2">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="228" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E0A-fz-iY2" id="rsu-Ec-Xy8">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -119,6 +151,11 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item 1" id="r8U-sI-od0"/>
+                    <connections>
+                        <outlet property="whiteCameraButton" destination="RhI-Dc-Hbl" id="Rtg-hO-XeR"/>
+                        <outlet property="whitePlusButton" destination="iAb-et-BpP" id="Pj2-IH-d6Q"/>
+                        <segue destination="ga3-Kw-iav" kind="presentation" identifier="goToNewSegue" id="zHY-U9-L1P"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmz-D5-aED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,4 +190,8 @@
             <point key="canvasLocation" x="-732" y="155"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="256" height="256"/>
+        <image name="whiteCamera" width="256" height="256"/>
+    </resources>
 </document>
