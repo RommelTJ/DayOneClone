@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B076398120BFA21A008F9DFA /* JournalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B076398020BFA21A008F9DFA /* JournalDetailViewController.swift */; };
+		B076398320BFA242008F9DFA /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B076398220BFA242008F9DFA /* JournalTableViewController.swift */; };
+		B076398520BFA25B008F9DFA /* CreateJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B076398420BFA25A008F9DFA /* CreateJournalViewController.swift */; };
+		B076398720BFA278008F9DFA /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B076398620BFA278008F9DFA /* PhotoCollectionViewController.swift */; };
 		B098D89F20BEFEF000F87405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B098D89E20BEFEF000F87405 /* AppDelegate.swift */; };
 		B098D8A420BEFEF000F87405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B098D8A220BEFEF000F87405 /* Main.storyboard */; };
 		B098D8A620BEFEF100F87405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B098D8A520BEFEF100F87405 /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B076398020BFA21A008F9DFA /* JournalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailViewController.swift; sourceTree = "<group>"; };
+		B076398220BFA242008F9DFA /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewController.swift; sourceTree = "<group>"; };
+		B076398420BFA25A008F9DFA /* CreateJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalViewController.swift; sourceTree = "<group>"; };
+		B076398620BFA278008F9DFA /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		B098D89B20BEFEF000F87405 /* DayOneClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayOneClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B098D89E20BEFEF000F87405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B098D8A320BEFEF000F87405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				B098D89E20BEFEF000F87405 /* AppDelegate.swift */,
+				B076398020BFA21A008F9DFA /* JournalDetailViewController.swift */,
+				B076398220BFA242008F9DFA /* JournalTableViewController.swift */,
+				B076398420BFA25A008F9DFA /* CreateJournalViewController.swift */,
+				B076398620BFA278008F9DFA /* PhotoCollectionViewController.swift */,
 				B098D8A220BEFEF000F87405 /* Main.storyboard */,
 				B098D8A520BEFEF100F87405 /* Assets.xcassets */,
 				B098D8A720BEFEF100F87405 /* LaunchScreen.storyboard */,
@@ -132,7 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B076398720BFA278008F9DFA /* PhotoCollectionViewController.swift in Sources */,
 				B098D89F20BEFEF000F87405 /* AppDelegate.swift in Sources */,
+				B076398320BFA242008F9DFA /* JournalTableViewController.swift in Sources */,
+				B076398520BFA25B008F9DFA /* CreateJournalViewController.swift in Sources */,
+				B076398120BFA21A008F9DFA /* JournalDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
