@@ -20,6 +20,18 @@ class JournalTableViewController: UITableViewController {
         whitePlusButton.imageView?.contentMode = .scaleAspectFit
         
     }
+    
+    @IBAction func cameraTapped(_ sender: Any) {
+        performSegue(withIdentifier: "goToNewSegue", sender: "camera")
+    }
+    
+    @IBAction func plusTapped(_ sender: Any) {
+        performSegue(withIdentifier: "goToNewSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Implement later.
+    }
 
     // MARK: - Table view data source
 

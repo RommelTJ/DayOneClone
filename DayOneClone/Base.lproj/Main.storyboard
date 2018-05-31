@@ -113,10 +113,16 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhI-Dc-Hbl">
                                             <rect key="frame" x="0.0" y="0.0" width="187.5" height="60"/>
                                             <state key="normal" image="whiteCamera"/>
+                                            <connections>
+                                                <action selector="cameraTapped:" destination="0kp-Il-fqh" eventType="touchUpInside" id="dFq-zK-GNj"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAb-et-BpP">
                                             <rect key="frame" x="187.5" y="0.0" width="187.5" height="60"/>
                                             <state key="normal" image="add"/>
+                                            <connections>
+                                                <action selector="plusTapped:" destination="0kp-Il-fqh" eventType="touchUpInside" id="lu3-Cb-xC7"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -148,6 +154,7 @@
                     <connections>
                         <outlet property="whiteCameraButton" destination="RhI-Dc-Hbl" id="Rtg-hO-XeR"/>
                         <outlet property="whitePlusButton" destination="iAb-et-BpP" id="Pj2-IH-d6Q"/>
+                        <segue destination="ga3-Kw-iav" kind="presentation" identifier="goToNewSegue" id="zHY-U9-L1P"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmz-D5-aED" userLabel="First Responder" sceneMemberID="firstResponder"/>
