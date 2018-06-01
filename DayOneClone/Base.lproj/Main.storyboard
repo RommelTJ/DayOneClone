@@ -278,6 +278,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QU0-fg-EUa"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="83e-5f-yaf" id="HgQ-wQ-Xtl"/>
+                        <outlet property="datePicker" destination="jVT-se-wmo" id="n10-za-U8j"/>
+                        <outlet property="journalTextView" destination="yPL-eR-tnv" id="BKf-Vt-fHl"/>
+                        <outlet property="navBar" destination="wKi-9z-MQL" id="6S0-z2-6MP"/>
+                        <outlet property="setDateButton" destination="SOX-6G-lgc" id="UwJ-ve-5LE"/>
+                        <outlet property="stackView" destination="1Rn-Bd-dob" id="7qF-oI-6iQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YaQ-zC-Lj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
