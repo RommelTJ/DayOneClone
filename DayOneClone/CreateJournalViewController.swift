@@ -32,11 +32,11 @@ class CreateJournalViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
     }
     
-    @objc func keyboardWillHide() {
+    @objc func keyboardWillHide(notification: Notification) {
         
     }
     
-    @objc func keyboardWillShow() {
+    @objc func keyboardWillShow(notification: Notification) {
         
     }
     
