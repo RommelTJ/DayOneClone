@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import Toucan
 
 class Entry: Object {
     @objc dynamic var text = ""
@@ -25,6 +26,9 @@ class Picture: Object {
         
         // Save image to disk.
         fullImageName = imageToURLString(image: image)
+        if let smallImage = Toucan(image: image).resize(CGSize(width: 500, height: 500), fitMode: .crop).image {
+            thumbnailImage = imageToURLString(image: smallImage)
+        }
     }
     
     func imageToURLString(image: UIImage) -> String {
