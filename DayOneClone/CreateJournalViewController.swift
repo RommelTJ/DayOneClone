@@ -32,6 +32,10 @@ class CreateJournalViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navBar.topItem?.title = "June 1"
+    }
+    
     @objc func keyboardWillHide(notification: Notification) {
         changeKeyboardHeight(notification: notification)
     }
