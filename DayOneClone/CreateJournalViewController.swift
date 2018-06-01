@@ -18,6 +18,8 @@ class CreateJournalViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var aboveNavBarView: UIView!
     
+    private var date = Date()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navBar.barTintColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00) // 4CC1FC
@@ -33,7 +35,13 @@ class CreateJournalViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navBar.topItem?.title = "June 1"
+        updateDate()
+    }
+    
+    func updateDate() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "E, MMM d, yyyy"
+        navBar.topItem?.title = formatter.string(from: date)
     }
     
     @objc func keyboardWillHide(notification: Notification) {
@@ -58,9 +66,18 @@ class CreateJournalViewController: UIViewController {
     }
     
     @IBAction func setDateTapped(_ sender: Any) {
+        journalTextView.isHidden = false
+        datePicker.isHidden = true
+        setDateButton.isHidden = true
+        date = datePicker.date
+        updateDate()
     }
     
     @IBAction func blueCalendarTapped(_ sender: Any) {
+        journalTextView.isHidden = true
+        datePicker.isHidden = false
+        setDateButton.isHidden = false
+        datePicker.date = date
     }
     
     @IBAction func blueCameraTapped(_ sender: Any) {
