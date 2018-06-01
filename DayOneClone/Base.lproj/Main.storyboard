@@ -235,7 +235,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOX-6G-lgc">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOX-6G-lgc">
                                 <rect key="frame" x="0.0" y="557" width="375" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="57A-Lx-Cxy"/>
@@ -245,7 +245,7 @@
                                     <action selector="setDateTapped:" destination="ga3-Kw-iav" eventType="touchUpInside" id="Ctr-JW-Wt6"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jVT-se-wmo">
+                            <datePicker hidden="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jVT-se-wmo">
                                 <rect key="frame" x="0.0" y="64" width="375" height="493"/>
                                 <date key="date" timeIntervalSinceReferenceDate="549516764.01582694">
                                     <!--2018-06-01 03:32:44 +0000-->
