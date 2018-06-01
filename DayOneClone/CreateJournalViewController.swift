@@ -19,6 +19,10 @@ class CreateJournalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navBar.barTintColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00) // 4CC1FC
+        navBar.tintColor = .white
+        navBar.isTranslucent = false
+        navBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
