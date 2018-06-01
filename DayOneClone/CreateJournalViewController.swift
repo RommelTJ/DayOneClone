@@ -26,6 +26,18 @@ class CreateJournalViewController: UIViewController {
         navBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         aboveNavBarView.backgroundColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00) // 4CC1FC
+        
+        // Keyboard Notification Observers.
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
+    }
+    
+    @objc func keyboardWillHide() {
+        
+    }
+    
+    @objc func keyboardWillShow() {
+        
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
