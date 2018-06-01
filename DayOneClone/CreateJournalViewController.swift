@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateJournalViewController: UIViewController {
+class CreateJournalViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var journalTextView: UITextView!
@@ -19,6 +19,8 @@ class CreateJournalViewController: UIViewController {
     @IBOutlet weak var aboveNavBarView: UIView!
     
     private var date = Date()
+    private var imagePicker = UIImagePickerController()
+    private var images: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,9 @@ class CreateJournalViewController: UIViewController {
         // Keyboard Notification Observers.
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        
+        // Image Picker
+        imagePicker.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,6 +86,26 @@ class CreateJournalViewController: UIViewController {
     }
     
     @IBAction func blueCameraTapped(_ sender: Any) {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    // Image Picker Delegate Methods
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            images.append(chosenImage)
+            let imageView = UIImageView()
+            imageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
+            imageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
+            imageView.image = chosenImage
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+            stackView.addArrangedSubview(imageView)
+            imagePicker.dismiss(animated: true) {
+                // TODO: Add some animation.
+            }
+        }
     }
     
 }
