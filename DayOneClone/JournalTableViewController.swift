@@ -30,7 +30,14 @@ class JournalTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Implement later.
+        if segue.identifier == "goToNewSegue" {
+            if let text = sender as? String {
+                if text == "camera" {
+                    let createVC = segue.destination as? CreateJournalViewController
+                    createVC?.startWithCamera = true
+                }
+            }
+        }
     }
 
     // MARK: - Table view data source

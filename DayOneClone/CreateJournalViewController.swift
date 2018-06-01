@@ -21,6 +21,7 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     private var date = Date()
     private var imagePicker = UIImagePickerController()
     private var images: [UIImage] = []
+    var startWithCamera = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,13 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     
     override func viewWillAppear(_ animated: Bool) {
         updateDate()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if startWithCamera {
+            startWithCamera = false
+            blueCameraTapped("")
+        }
     }
     
     func updateDate() {
