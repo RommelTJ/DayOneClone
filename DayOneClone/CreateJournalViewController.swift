@@ -79,6 +79,17 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func saveTapped(_ sender: Any) {
+        if let realm = try? Realm() {
+            let entry = Entry()
+            entry.text = journalTextView.text
+            entry.date = date
+            for image in images {
+                let picture = Picture()
+                // picture.fullImageName =
+                // picture.thumbnailImage =
+                // picture.entry = 
+            }
+        }
     }
     
     @IBAction func setDateTapped(_ sender: Any) {
