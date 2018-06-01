@@ -88,6 +88,14 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
                 entry.pictures.append(picture)
                 picture.entry = entry
             }
+            
+            // Save to Realm
+            try? realm.write {
+                realm.add(entry)
+            }
+            
+            // Dismiss this entry.
+            dismiss(animated: true, completion: nil)
         }
     }
     
