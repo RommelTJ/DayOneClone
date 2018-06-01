@@ -7,4 +7,5 @@ target 'DayOneClone' do
 
   # Pods for DayOneClone
   pod 'RealmSwift'
+  pod 'Toucan', '~>1.0.0'
 end

@@ -16,6 +16,7 @@
 		B098D8A420BEFEF000F87405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B098D8A220BEFEF000F87405 /* Main.storyboard */; };
 		B098D8A620BEFEF100F87405 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B098D8A520BEFEF100F87405 /* Assets.xcassets */; };
 		B098D8A920BEFEF100F87405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B098D8A720BEFEF100F87405 /* LaunchScreen.storyboard */; };
+		B0A0E4F120C1FED900A4A6BF /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0E4F020C1FED900A4A6BF /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B098D8A520BEFEF100F87405 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B098D8A820BEFEF100F87405 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B098D8AA20BEFEF100F87405 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0A0E4F020C1FED900A4A6BF /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				B076398220BFA242008F9DFA /* JournalTableViewController.swift */,
 				B076398420BFA25A008F9DFA /* CreateJournalViewController.swift */,
 				B076398620BFA278008F9DFA /* PhotoCollectionViewController.swift */,
+				B0A0E4F020C1FED900A4A6BF /* Models.swift */,
 				B098D8A220BEFEF000F87405 /* Main.storyboard */,
 				B098D8A520BEFEF100F87405 /* Assets.xcassets */,
 				B098D8A720BEFEF100F87405 /* LaunchScreen.storyboard */,
@@ -193,11 +196,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-DayOneClone/Pods-DayOneClone-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Toucan/Toucan.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toucan.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -214,6 +219,7 @@
 				B076398720BFA278008F9DFA /* PhotoCollectionViewController.swift in Sources */,
 				B098D89F20BEFEF000F87405 /* AppDelegate.swift in Sources */,
 				B076398320BFA242008F9DFA /* JournalTableViewController.swift in Sources */,
+				B0A0E4F120C1FED900A4A6BF /* Models.swift in Sources */,
 				B076398520BFA25B008F9DFA /* CreateJournalViewController.swift in Sources */,
 				B076398120BFA21A008F9DFA /* JournalDetailViewController.swift in Sources */,
 			);

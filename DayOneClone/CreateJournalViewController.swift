@@ -9,12 +9,6 @@
 import UIKit
 import RealmSwift
 
-// Experimenting with Realm.
-class HotDog: Object {
-    @objc dynamic var name = ""
-    @objc dynamic var tastiness = 0
-}
-
 class CreateJournalViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
@@ -33,34 +27,11 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Experimenting with Realm.
-        let dog = HotDog()
-        dog.name = "New Yorker"
-        dog.tastiness = 8
-        // Querying
-        if let realm = try? Realm() {
-            let hotdogs = realm.objects(HotDog.self)
-            print("hotdogs: \(hotdogs.count)")
-            print("hotdogs: \(hotdogs.first?.name)")
-        }
-        // Saving
-        if let realm = try? Realm() {
-            try? realm.write {
-                realm.add(dog)
-            }
-        }
-        // Querying
-        if let realm = try? Realm() {
-            let hotdogs = realm.objects(HotDog.self)
-            print("hotdogs: \(hotdogs.count)")
-            print("hotdogs: \(hotdogs.first?.name)")
-        }
-        
+        // Navigation bar customizations.
         navBar.barTintColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00) // 4CC1FC
         navBar.tintColor = .white
         navBar.isTranslucent = false
         navBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        
         aboveNavBarView.backgroundColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00) // 4CC1FC
         
         // Keyboard Notification Observers.
@@ -108,6 +79,24 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func saveTapped(_ sender: Any) {
+        if let realm = try? Realm() {
+            let entry = Entry()
+            entry.text = journalTextView.text
+            entry.date = date
+            for image in images {
+                let picture = Picture(image: image)
+                entry.pictures.append(picture)
+                picture.entry = entry
+            }
+            
+            // Save to Realm
+            try? realm.write {
+                realm.add(entry)
+            }
+            
+            // Dismiss this entry.
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func setDateTapped(_ sender: Any) {
