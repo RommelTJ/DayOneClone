@@ -183,7 +183,7 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yER-et-Ha9">
-                                <rect key="frame" x="10" y="607" width="375" height="70"/>
+                                <rect key="frame" x="16" y="587" width="343" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Rn-Bd-dob">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
@@ -215,21 +215,21 @@
                                 </constraints>
                             </scrollView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yPL-eR-tnv">
-                                <rect key="frame" x="0.0" y="64" width="375" height="543"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="523"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOX-6G-lgc">
-                                <rect key="frame" x="0.0" y="577" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="557" width="375" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="57A-Lx-Cxy"/>
                                 </constraints>
                                 <state key="normal" title="Set Date"/>
                             </button>
                             <datePicker contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jVT-se-wmo">
-                                <rect key="frame" x="0.0" y="64" width="375" height="513"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="493"/>
                                 <date key="date" timeIntervalSinceReferenceDate="549516764.01582694">
                                     <!--2018-06-01 03:32:44 +0000-->
                                 </date>
@@ -245,15 +245,15 @@
                             <constraint firstItem="vzr-it-gff" firstAttribute="leading" secondItem="QU0-fg-EUa" secondAttribute="leading" id="IgG-ca-zDQ"/>
                             <constraint firstItem="wKi-9z-MQL" firstAttribute="top" secondItem="QU0-fg-EUa" secondAttribute="top" id="MQ3-Gp-FwA"/>
                             <constraint firstItem="yER-et-Ha9" firstAttribute="top" secondItem="yPL-eR-tnv" secondAttribute="bottom" id="Ty6-Us-XO5"/>
-                            <constraint firstItem="yER-et-Ha9" firstAttribute="bottom" secondItem="QU0-fg-EUa" secondAttribute="bottom" constant="10" id="XRb-aB-XAO"/>
+                            <constraint firstItem="yER-et-Ha9" firstAttribute="bottom" secondItem="QU0-fg-EUa" secondAttribute="bottom" constant="-10" id="XRb-aB-XAO"/>
                             <constraint firstItem="SOX-6G-lgc" firstAttribute="leading" secondItem="QU0-fg-EUa" secondAttribute="leading" id="anB-dt-CnS"/>
                             <constraint firstItem="jVT-se-wmo" firstAttribute="leading" secondItem="cM1-0u-Xwb" secondAttribute="leading" id="bzb-EB-cXu"/>
                             <constraint firstItem="wKi-9z-MQL" firstAttribute="top" secondItem="vzr-it-gff" secondAttribute="bottom" id="dAS-VA-QHz"/>
                             <constraint firstItem="SOX-6G-lgc" firstAttribute="top" secondItem="jVT-se-wmo" secondAttribute="bottom" id="exd-v9-7sR"/>
                             <constraint firstItem="yPL-eR-tnv" firstAttribute="top" secondItem="wKi-9z-MQL" secondAttribute="bottom" id="ezb-ab-gEh"/>
                             <constraint firstItem="QU0-fg-EUa" firstAttribute="trailing" secondItem="SOX-6G-lgc" secondAttribute="trailing" id="g57-FF-gQL"/>
-                            <constraint firstItem="yER-et-Ha9" firstAttribute="trailing" secondItem="QU0-fg-EUa" secondAttribute="trailing" constant="10" id="pkF-dM-eXE"/>
-                            <constraint firstItem="yER-et-Ha9" firstAttribute="leading" secondItem="QU0-fg-EUa" secondAttribute="leading" constant="10" id="rh6-hS-5Ud"/>
+                            <constraint firstItem="yER-et-Ha9" firstAttribute="trailing" secondItem="QU0-fg-EUa" secondAttribute="trailing" constant="-16" id="pkF-dM-eXE"/>
+                            <constraint firstItem="yER-et-Ha9" firstAttribute="leading" secondItem="QU0-fg-EUa" secondAttribute="leading" constant="16" id="rh6-hS-5Ud"/>
                             <constraint firstItem="wKi-9z-MQL" firstAttribute="trailing" secondItem="QU0-fg-EUa" secondAttribute="trailing" id="s25-cc-b0D"/>
                             <constraint firstItem="QU0-fg-EUa" firstAttribute="trailing" secondItem="yPL-eR-tnv" secondAttribute="trailing" id="xtG-QF-kjL"/>
                             <constraint firstItem="yER-et-Ha9" firstAttribute="top" secondItem="SOX-6G-lgc" secondAttribute="bottom" id="yu1-Hk-11i"/>
