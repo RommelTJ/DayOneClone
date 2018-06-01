@@ -7,6 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
+
+// Experimenting with Realm.
+class HotDog: Object {
+    @objc dynamic var name = ""
+    @objc dynamic var tastiness = 0
+}
 
 class CreateJournalViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -25,6 +32,30 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Experimenting with Realm.
+        let dog = HotDog()
+        dog.name = "New Yorker"
+        dog.tastiness = 8
+        // Querying
+        if let realm = try? Realm() {
+            let hotdogs = realm.objects(HotDog.self)
+            print("hotdogs: \(hotdogs.count)")
+            print("hotdogs: \(hotdogs.first?.name)")
+        }
+        // Saving
+        if let realm = try? Realm() {
+            try? realm.write {
+                realm.add(dog)
+            }
+        }
+        // Querying
+        if let realm = try? Realm() {
+            let hotdogs = realm.objects(HotDog.self)
+            print("hotdogs: \(hotdogs.count)")
+            print("hotdogs: \(hotdogs.first?.name)")
+        }
+        
         navBar.barTintColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00) // 4CC1FC
         navBar.tintColor = .white
         navBar.isTranslucent = false
