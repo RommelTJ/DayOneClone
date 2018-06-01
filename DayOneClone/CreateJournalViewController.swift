@@ -84,10 +84,9 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
             entry.text = journalTextView.text
             entry.date = date
             for image in images {
-                let picture = Picture()
-                // picture.fullImageName =
-                // picture.thumbnailImage =
-                // picture.entry = 
+                let picture = Picture(image: image)
+                entry.pictures.append(picture)
+                picture.entry = entry
             }
         }
     }
