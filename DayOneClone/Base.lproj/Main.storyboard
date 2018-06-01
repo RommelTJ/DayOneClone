@@ -280,7 +280,7 @@
                     </view>
                     <connections>
                         <outlet property="aboveNavBarView" destination="vzr-it-gff" id="RoQ-Ul-Jhz"/>
-                        <outlet property="bottomConstraint" destination="83e-5f-yaf" id="HgQ-wQ-Xtl"/>
+                        <outlet property="bottomConstraint" destination="XRb-aB-XAO" id="CVw-cd-LhM"/>
                         <outlet property="datePicker" destination="jVT-se-wmo" id="n10-za-U8j"/>
                         <outlet property="journalTextView" destination="yPL-eR-tnv" id="BKf-Vt-fHl"/>
                         <outlet property="navBar" destination="wKi-9z-MQL" id="6S0-z2-6MP"/>
