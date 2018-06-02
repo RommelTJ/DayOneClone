@@ -15,6 +15,7 @@ class JournalTableViewCell: UITableViewCell {
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var cellTextLabel: UILabel!
+    @IBOutlet weak var imageWidthConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -147,6 +146,10 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jul-hZ-jWl">
                                             <rect key="frame" x="0.0" y="0.0" width="99.5" height="99.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="DuM-vM-zQq"/>
+                                                <constraint firstAttribute="width" constant="100" id="EwL-J6-QnC"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9e-z9-DeK">
                                             <rect key="frame" x="299" y="11" width="60" height="17"/>
@@ -188,7 +191,6 @@
                                         <constraint firstAttribute="bottom" secondItem="pXL-dG-bfY" secondAttribute="bottom" id="9GV-NH-JhG"/>
                                         <constraint firstItem="pXL-dG-bfY" firstAttribute="trailing" secondItem="rsu-Ec-Xy8" secondAttribute="trailingMargin" id="Hq1-p3-JBe"/>
                                         <constraint firstItem="fHV-Tc-f00" firstAttribute="top" secondItem="rsu-Ec-Xy8" secondAttribute="topMargin" id="IqV-SA-b08"/>
-                                        <constraint firstItem="jul-hZ-jWl" firstAttribute="width" secondItem="rsu-Ec-Xy8" secondAttribute="height" multiplier="1:1" id="Npx-nH-idp"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="fHV-Tc-f00" secondAttribute="bottom" id="R1G-HP-gG5"/>
                                         <constraint firstItem="G9e-z9-DeK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rsu-Ec-Xy8" secondAttribute="leadingMargin" id="cZC-tj-Ibf"/>
                                         <constraint firstItem="jul-hZ-jWl" firstAttribute="leading" secondItem="rsu-Ec-Xy8" secondAttribute="leading" id="fAp-wA-8pr"/>
@@ -208,6 +210,7 @@
                                     <outlet property="cellImageView" destination="jul-hZ-jWl" id="wAo-MX-Lyy"/>
                                     <outlet property="cellTextLabel" destination="fHV-Tc-f00" id="fr6-PL-CLe"/>
                                     <outlet property="dayLabel" destination="D05-z2-svs" id="pye-eA-PZg"/>
+                                    <outlet property="imageWidthConstraint" destination="EwL-J6-QnC" id="eT5-wi-rNL"/>
                                     <outlet property="monthLabel" destination="G9e-z9-DeK" id="jUs-CR-I4x"/>
                                     <outlet property="yearLabel" destination="pXL-dG-bfY" id="8Pu-X6-ayq"/>
                                 </connections>
