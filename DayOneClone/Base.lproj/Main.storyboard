@@ -138,7 +138,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="journalCell" rowHeight="100" id="E0A-fz-iY2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="journalCell" rowHeight="100" id="E0A-fz-iY2" customClass="JournalTableViewCell" customModule="DayOneClone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="228" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E0A-fz-iY2" id="rsu-Ec-Xy8">
@@ -204,6 +204,13 @@
                                         <constraint firstItem="G9e-z9-DeK" firstAttribute="trailing" secondItem="rsu-Ec-Xy8" secondAttribute="trailingMargin" id="wG0-yd-ijQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellImageView" destination="jul-hZ-jWl" id="wAo-MX-Lyy"/>
+                                    <outlet property="cellTextLabel" destination="fHV-Tc-f00" id="fr6-PL-CLe"/>
+                                    <outlet property="dayLabel" destination="D05-z2-svs" id="pye-eA-PZg"/>
+                                    <outlet property="monthLabel" destination="G9e-z9-DeK" id="jUs-CR-I4x"/>
+                                    <outlet property="yearLabel" destination="pXL-dG-bfY" id="8Pu-X6-ayq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
