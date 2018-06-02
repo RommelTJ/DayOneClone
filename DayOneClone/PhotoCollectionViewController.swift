@@ -50,6 +50,20 @@ class PhotoCollectionViewController: UICollectionViewController, UICollectionVie
         }
         return UICollectionViewCell()
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "photoToDetailSegue", sender: pictures?[indexPath.row].entry)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "photoToDetailSegue" {
+            if let entry = sender as? Entry {
+                if let detailVC = segue.destination as? JournalDetailViewController {
+                    detailVC.entry = entry
+                }
+            }
+        }
+    }
 
     // MARK: UICollectionViewDelegateFlowLayout
     

@@ -133,6 +133,9 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Item 2" id="omu-Xy-VM8"/>
+                    <connections>
+                        <segue destination="jgG-5e-kCh" kind="showDetail" identifier="photoToDetailSegue" id="ROa-p2-GZy"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEp-yi-69g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -468,6 +471,6 @@
         <image name="whiteCamera" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fIn-Vl-Zxl"/>
+        <segue reference="ROa-p2-GZy"/>
     </inferredMetricsTieBreakers>
 </document>
