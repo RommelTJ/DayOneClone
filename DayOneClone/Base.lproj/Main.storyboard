@@ -370,7 +370,7 @@
         <!--Split View Controller-->
         <scene sceneID="pCh-tM-sVz">
             <objects>
-                <splitViewController id="DNr-Nc-tcr" sceneMemberID="viewController">
+                <splitViewController id="DNr-Nc-tcr" customClass="SplitViewController" customModule="DayOneClone" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="FVR-CX-TCe" kind="relationship" relationship="masterViewController" id="eRb-fE-Wba"/>
                         <segue destination="jgG-5e-kCh" kind="relationship" relationship="detailViewController" id="ZMm-dT-eYN"/>
