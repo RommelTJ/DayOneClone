@@ -19,10 +19,10 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var aboveNavBarView: UIView!
     
-    private var date = Date()
     private var imagePicker = UIImagePickerController()
     private var images: [UIImage] = []
     var startWithCamera = false
+    var entry = Entry()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +54,7 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     }
     
     func updateDate() {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "E, MMM d, yyyy"
-        navBar.topItem?.title = formatter.string(from: date)
+        navBar.topItem?.title = entry.datePrettyString()
     }
     
     @objc func keyboardWillHide(notification: Notification) {
@@ -82,7 +80,6 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
         if let realm = try? Realm() {
             let entry = Entry()
             entry.text = journalTextView.text
-            entry.date = date
             for image in images {
                 let picture = Picture(image: image)
                 entry.pictures.append(picture)
@@ -103,7 +100,7 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
         journalTextView.isHidden = false
         datePicker.isHidden = true
         setDateButton.isHidden = true
-        date = datePicker.date
+        entry.date = datePicker.date
         updateDate()
     }
     
@@ -111,7 +108,7 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
         journalTextView.isHidden = true
         datePicker.isHidden = false
         setDateButton.isHidden = false
-        datePicker.date = date
+        datePicker.date = entry.date
     }
     
     @IBAction func blueCameraTapped(_ sender: Any) {

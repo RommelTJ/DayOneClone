@@ -55,7 +55,6 @@ class JournalTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let entries = entries {
-            print(entries.count)
             return entries.count
         } else {
             return 0
@@ -72,6 +71,9 @@ class JournalTableViewController: UITableViewController {
                 } else {
                     cell.imageWidthConstraint.constant = 0
                 }
+                cell.monthLabel.text = entry.monthPrettyString()
+                cell.dayLabel.text = entry.dayPrettyString()
+                cell.yearLabel.text = entry.yearPrettyString()
             }
             return cell
         }
