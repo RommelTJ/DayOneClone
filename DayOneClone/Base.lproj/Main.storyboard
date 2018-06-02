@@ -41,7 +41,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="X9E-pP-ONS">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="X9E-pP-ONS" customClass="PhotoCollectionViewCell" customModule="DayOneClone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="171" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -85,6 +85,11 @@
                                     <constraint firstAttribute="bottom" secondItem="mYf-Ab-RHv" secondAttribute="bottom" id="maC-h4-ZWI"/>
                                     <constraint firstItem="MhP-vm-ELO" firstAttribute="leading" secondItem="X9E-pP-ONS" secondAttribute="leadingMargin" id="ojJ-S2-OhE"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dayLabel" destination="Gn7-Dy-BBo" id="Tov-Ko-gxi"/>
+                                    <outlet property="monthYearLabel" destination="MhP-vm-ELO" id="kQW-v7-6mU"/>
+                                    <outlet property="previewImageView" destination="mYf-Ab-RHv" id="o3j-Oy-sfL"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
