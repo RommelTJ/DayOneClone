@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class PhotoCollectionViewController: UICollectionViewController {
+class PhotoCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private var pictures: Results<Picture>?
     
@@ -27,22 +27,34 @@ class PhotoCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        if let pictures = self.pictures {
+            return pictures.count
+        } else {
+            return 0
+        }
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
-        return cell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCollectionViewCell", for: indexPath) as? PhotoCollectionViewCell {
+            if let picture = pictures?[indexPath.row] {
+                cell.previewImageView.image = picture.thumbnailImage()
+                cell.dayLabel.text = picture.entry?.dayPrettyString()
+                cell.monthYearLabel.text = picture.entry?.monthYearPrettyString()
+            }
+            return cell
+        }
+        return UICollectionViewCell()
     }
 
+    // MARK: UICollectionViewDelegateFlowLayout
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width/2, height: collectionView.frame.size.width/2)
+    }
+    
 }
