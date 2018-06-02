@@ -13,12 +13,20 @@ class JournalTableViewController: UITableViewController {
 
     @IBOutlet weak var whiteCameraButton: UIButton!
     @IBOutlet weak var whitePlusButton: UIButton!
+    @IBOutlet weak var topHeaderView: UIView!
     private var entries: Results<Entry>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         whiteCameraButton.imageView?.contentMode = .scaleAspectFit
         whitePlusButton.imageView?.contentMode = .scaleAspectFit
+        
+        // Navigation bar customizations.
+        navigationController?.navigationBar.barTintColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00) // 4CC1FC
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        topHeaderView.backgroundColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00) // 4CC1FC
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,7 +63,6 @@ class JournalTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let entries = entries {
-            print(entries.count)
             return entries.count
         } else {
             return 0
@@ -72,6 +79,9 @@ class JournalTableViewController: UITableViewController {
                 } else {
                     cell.imageWidthConstraint.constant = 0
                 }
+                cell.monthLabel.text = entry.monthPrettyString()
+                cell.dayLabel.text = entry.dayPrettyString()
+                cell.yearLabel.text = entry.yearPrettyString()
             }
             return cell
         }
