@@ -56,6 +56,12 @@ class JournalTableViewController: UITableViewController {
                     createVC?.startWithCamera = true
                 }
             }
+        } else if segue.identifier == "tableToDetailSegue" {
+            if let entry = sender as? Entry {
+                if let detailVC = segue.destination as? JournalDetailViewController {
+                    detailVC.entry = entry
+                }
+            }
         }
     }
 
@@ -90,6 +96,12 @@ class JournalTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let entry = entries?[indexPath.row] {
+            performSegue(withIdentifier: "tableToDetailSegue", sender: entry)
+        }
     }
 
 }
