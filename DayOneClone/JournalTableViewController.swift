@@ -53,14 +53,33 @@ class JournalTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        if let entries = entries {
+            print(entries.count)
+            return entries.count
+        } else {
+            return 0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "journalCell", for: indexPath) as? JournalTableViewCell {
+            if let entry = entries?[indexPath.row] {
+                cell.cellTextLabel.text = entry.text
+                if let thumbnailImage = entry.pictures.first?.thumbnailImage() {
+                    cell.imageWidthConstraint.constant = 100
+                    cell.cellImageView.image = thumbnailImage
+                } else {
+                    cell.imageWidthConstraint.constant = 0
+                }
+            }
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 
 }
