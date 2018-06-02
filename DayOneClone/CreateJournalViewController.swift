@@ -78,7 +78,6 @@ class CreateJournalViewController: UIViewController, UIImagePickerControllerDele
     
     @IBAction func saveTapped(_ sender: Any) {
         if let realm = try? Realm() {
-            let entry = Entry()
             entry.text = journalTextView.text
             for image in images {
                 let picture = Picture(image: image)
