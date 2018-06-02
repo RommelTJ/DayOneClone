@@ -12,7 +12,7 @@ class JournalDetailViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var journalTextLabel: UILabel!
-    private var entry: Entry?
+    var entry: Entry?
     
     override func viewDidLoad() {
         super.viewDidLoad()

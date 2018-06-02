@@ -161,7 +161,9 @@
         <scene sceneID="npc-N4-GDS">
             <objects>
                 <tabBarController id="rRm-oM-7ms" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Day One Clone" id="L6F-jd-w23"/>
+                    <navigationItem key="navigationItem" title="Day One Clone" id="L6F-jd-w23">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="IaN-aA-Otq"/>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pea-b6-Cg7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -307,11 +309,12 @@
                         <outlet property="whiteCameraButton" destination="RhI-Dc-Hbl" id="Rtg-hO-XeR"/>
                         <outlet property="whitePlusButton" destination="iAb-et-BpP" id="Pj2-IH-d6Q"/>
                         <segue destination="ga3-Kw-iav" kind="presentation" identifier="goToNewSegue" id="zHY-U9-L1P"/>
+                        <segue destination="jgG-5e-kCh" kind="showDetail" identifier="tableToDetailSegue" id="fIn-Vl-Zxl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmz-D5-aED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1892" y="-182.15892053973016"/>
+            <point key="canvasLocation" x="1938" y="-179"/>
         </scene>
         <!--Create Journal View Controller-->
         <scene sceneID="SxU-vU-jdA">
@@ -464,4 +467,7 @@
         <image name="calendar" width="256" height="256"/>
         <image name="whiteCamera" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fIn-Vl-Zxl"/>
+    </inferredMetricsTieBreakers>
 </document>
