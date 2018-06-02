@@ -18,7 +18,7 @@ class Entry: Object {
 
 class Picture: Object {
     @objc dynamic var fullImageName = ""
-    @objc dynamic var thumbnailImage = ""
+    @objc dynamic var thumbnailImageName = ""
     @objc dynamic var entry: Entry?
     
     convenience init(image: UIImage) {
@@ -27,7 +27,7 @@ class Picture: Object {
         // Save image to disk.
         fullImageName = imageToURLString(image: image)
         if let smallImage = Toucan(image: image).resize(CGSize(width: 500, height: 500), fitMode: .crop).image {
-            thumbnailImage = imageToURLString(image: smallImage)
+            thumbnailImageName = imageToURLString(image: smallImage)
         }
     }
     
@@ -41,4 +41,24 @@ class Picture: Object {
         }
         return ""
     }
+    
+    func fullImage() -> UIImage {
+        return imageWithFileName(fileName: fullImageName)
+    }
+    
+    func thumbnailImage() -> UIImage {
+        return imageWithFileName(fileName: thumbnailImageName)
+    }
+    
+    func imageWithFileName(fileName: String) -> UIImage {
+        var path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        path.appendPathComponent(fileName)
+        if let imageData = try? Data(contentsOf: path) {
+            if let image = UIImage(data: imageData) {
+                return image
+            }
+        }
+        return UIImage()
+    }
+    
 }

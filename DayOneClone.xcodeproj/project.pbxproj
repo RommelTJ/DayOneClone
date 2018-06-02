@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D4E19A18459AB54D3E7D83F /* Pods_DayOneClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F9D45197A3B80C2E46815FF /* Pods_DayOneClone.framework */; };
+		B00BA91420C2444700BE7BF1 /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00BA91320C2444700BE7BF1 /* JournalTableViewCell.swift */; };
 		B076398120BFA21A008F9DFA /* JournalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B076398020BFA21A008F9DFA /* JournalDetailViewController.swift */; };
 		B076398320BFA242008F9DFA /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B076398220BFA242008F9DFA /* JournalTableViewController.swift */; };
 		B076398520BFA25B008F9DFA /* CreateJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B076398420BFA25A008F9DFA /* CreateJournalViewController.swift */; };
@@ -23,6 +24,7 @@
 		65CC167980EB7D4F337363A3 /* Pods-DayOneClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayOneClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-DayOneClone/Pods-DayOneClone.release.xcconfig"; sourceTree = "<group>"; };
 		9F9D45197A3B80C2E46815FF /* Pods_DayOneClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DayOneClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6D5EEF3659C22820F70E7D /* Pods-DayOneClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DayOneClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DayOneClone/Pods-DayOneClone.debug.xcconfig"; sourceTree = "<group>"; };
+		B00BA91320C2444700BE7BF1 /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 		B076398020BFA21A008F9DFA /* JournalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailViewController.swift; sourceTree = "<group>"; };
 		B076398220BFA242008F9DFA /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewController.swift; sourceTree = "<group>"; };
 		B076398420BFA25A008F9DFA /* CreateJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				B098D89E20BEFEF000F87405 /* AppDelegate.swift */,
 				B076398020BFA21A008F9DFA /* JournalDetailViewController.swift */,
 				B076398220BFA242008F9DFA /* JournalTableViewController.swift */,
+				B00BA91320C2444700BE7BF1 /* JournalTableViewCell.swift */,
 				B076398420BFA25A008F9DFA /* CreateJournalViewController.swift */,
 				B076398620BFA278008F9DFA /* PhotoCollectionViewController.swift */,
 				B0A0E4F020C1FED900A4A6BF /* Models.swift */,
@@ -218,6 +221,7 @@
 			files = (
 				B076398720BFA278008F9DFA /* PhotoCollectionViewController.swift in Sources */,
 				B098D89F20BEFEF000F87405 /* AppDelegate.swift in Sources */,
+				B00BA91420C2444700BE7BF1 /* JournalTableViewCell.swift in Sources */,
 				B076398320BFA242008F9DFA /* JournalTableViewController.swift in Sources */,
 				B0A0E4F120C1FED900A4A6BF /* Models.swift in Sources */,
 				B076398520BFA25B008F9DFA /* CreateJournalViewController.swift in Sources */,
