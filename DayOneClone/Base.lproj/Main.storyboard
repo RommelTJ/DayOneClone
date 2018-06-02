@@ -34,20 +34,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pgz-jk-A9m">
-                            <size key="itemSize" width="50" height="50"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pgz-jk-A9m">
+                            <size key="itemSize" width="171" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="X9E-pP-ONS">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCollectionViewCell" id="X9E-pP-ONS" customClass="PhotoCollectionViewCell" customModule="DayOneClone" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="171" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="171" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mYf-Ab-RHv">
+                                            <rect key="frame" x="0.0" y="0.0" width="171" height="150"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAY 2018" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhP-vm-ELO">
+                                            <rect key="frame" x="8" y="121" width="155" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="XNW-q4-Jbx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn7-Dy-BBo">
+                                            <rect key="frame" x="8" y="71" width="155" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="OEx-05-6X1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Gn7-Dy-BBo" secondAttribute="trailing" id="5V6-9K-PPe"/>
+                                    <constraint firstItem="MhP-vm-ELO" firstAttribute="top" secondItem="Gn7-Dy-BBo" secondAttribute="bottom" id="9LV-jj-D7W"/>
+                                    <constraint firstItem="mYf-Ab-RHv" firstAttribute="top" secondItem="X9E-pP-ONS" secondAttribute="top" id="ILk-B1-rx8"/>
+                                    <constraint firstAttribute="trailing" secondItem="mYf-Ab-RHv" secondAttribute="trailing" id="UyC-eW-rgK"/>
+                                    <constraint firstItem="Gn7-Dy-BBo" firstAttribute="leading" secondItem="X9E-pP-ONS" secondAttribute="leadingMargin" id="WNG-Lb-Yov"/>
+                                    <constraint firstItem="MhP-vm-ELO" firstAttribute="trailing" secondItem="X9E-pP-ONS" secondAttribute="trailingMargin" id="awC-oc-1l1"/>
+                                    <constraint firstItem="mYf-Ab-RHv" firstAttribute="leading" secondItem="X9E-pP-ONS" secondAttribute="leading" id="fp2-Wg-2Up"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="MhP-vm-ELO" secondAttribute="bottom" id="iyP-DV-tuf"/>
+                                    <constraint firstAttribute="bottom" secondItem="mYf-Ab-RHv" secondAttribute="bottom" id="maC-h4-ZWI"/>
+                                    <constraint firstItem="MhP-vm-ELO" firstAttribute="leading" secondItem="X9E-pP-ONS" secondAttribute="leadingMargin" id="ojJ-S2-OhE"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dayLabel" destination="Gn7-Dy-BBo" id="Tov-Ko-gxi"/>
+                                    <outlet property="monthYearLabel" destination="MhP-vm-ELO" id="kQW-v7-6mU"/>
+                                    <outlet property="previewImageView" destination="mYf-Ab-RHv" id="o3j-Oy-sfL"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -59,7 +101,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEp-yi-69g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="486"/>
+            <point key="canvasLocation" x="1029.5999999999999" y="485.30734632683664"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x9j-Wg-6jB">
