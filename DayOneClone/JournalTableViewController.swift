@@ -13,23 +13,16 @@ class JournalTableViewController: UITableViewController {
 
     @IBOutlet weak var whiteCameraButton: UIButton!
     @IBOutlet weak var whitePlusButton: UIButton!
+    private var entries: Results<Entry>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         whiteCameraButton.imageView?.contentMode = .scaleAspectFit
         whitePlusButton.imageView?.contentMode = .scaleAspectFit
-        
-        if let realm = try? Realm() {
-            let entries = realm.objects(Entry.self)
-            print("ENTRIES: \(entries.count)")
-            for entry in entries {
-                print("ENTRY: \(entry.text)")
-                print("ENTRY: \(entry.date)")
-                print("ENTRY: \(entry.pictures.count)")
-            }
-        }
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getEntries()
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
@@ -38,6 +31,13 @@ class JournalTableViewController: UITableViewController {
     
     @IBAction func plusTapped(_ sender: Any) {
         performSegue(withIdentifier: "goToNewSegue", sender: nil)
+    }
+    
+    func getEntries() {
+        if let realm = try? Realm() {
+            entries = realm.objects(Entry.self).sorted(byKeyPath: "date", ascending: false)
+            tableView.reloadData()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
