@@ -13,12 +13,20 @@ class JournalTableViewController: UITableViewController {
 
     @IBOutlet weak var whiteCameraButton: UIButton!
     @IBOutlet weak var whitePlusButton: UIButton!
+    @IBOutlet weak var topHeaderView: UIView!
     private var entries: Results<Entry>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         whiteCameraButton.imageView?.contentMode = .scaleAspectFit
         whitePlusButton.imageView?.contentMode = .scaleAspectFit
+        
+        // Navigation bar customizations.
+        navigationController?.navigationBar.barTintColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00) // 4CC1FC
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        topHeaderView.backgroundColor = UIColor(red: 0.298, green: 0.757, blue: 0.988, alpha: 1.00) // 4CC1FC
     }
     
     override func viewWillAppear(_ animated: Bool) {
