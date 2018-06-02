@@ -18,9 +18,44 @@
                     <view key="view" contentMode="scaleToFill" id="8Uf-f1-YpJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jj2-fY-kaF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hXi-Z2-eig">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journal Entry Hellow. sdfgad .sd gsd.g .sdg.sd.g .ds .g.sdgfhsf." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWr-B7-F2o">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hXi-Z2-eig" secondAttribute="bottom" id="PJD-F5-30L"/>
+                                    <constraint firstItem="hXi-Z2-eig" firstAttribute="leading" secondItem="Jj2-fY-kaF" secondAttribute="leading" id="ipb-eC-58w"/>
+                                    <constraint firstItem="hXi-Z2-eig" firstAttribute="width" secondItem="Jj2-fY-kaF" secondAttribute="width" id="nup-0k-6qR"/>
+                                    <constraint firstAttribute="trailing" secondItem="hXi-Z2-eig" secondAttribute="trailing" id="oM7-8V-P2t"/>
+                                    <constraint firstItem="hXi-Z2-eig" firstAttribute="top" secondItem="Jj2-fY-kaF" secondAttribute="top" id="qs8-pL-joy"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jj2-fY-kaF" firstAttribute="top" secondItem="Mnb-xV-gZv" secondAttribute="top" id="TpR-zn-kf2"/>
+                            <constraint firstItem="Mnb-xV-gZv" firstAttribute="bottom" secondItem="Jj2-fY-kaF" secondAttribute="bottom" id="V52-a8-9AA"/>
+                            <constraint firstItem="Jj2-fY-kaF" firstAttribute="leading" secondItem="Mnb-xV-gZv" secondAttribute="leading" id="agB-sL-Cvd"/>
+                            <constraint firstItem="Mnb-xV-gZv" firstAttribute="trailing" secondItem="Jj2-fY-kaF" secondAttribute="trailing" id="uAi-GM-na1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Mnb-xV-gZv"/>
                     </view>
+                    <connections>
+                        <outlet property="journalTextLabel" destination="aWr-B7-F2o" id="LkW-Iv-vWL"/>
+                        <outlet property="stackView" destination="hXi-Z2-eig" id="oB7-Oe-Odw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B53-QB-hXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
